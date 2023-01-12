@@ -24,9 +24,6 @@ public class UnitOfMeasureServiceImpl implements UnitOfMeasureService {
     public Flux<UnitOfMeasureCommand> listAllUoms() {
 
         return unitOfMeasureReactiveRepository.findAll().map(unitOfMeasureToUnitOfMeasureCommand::convert);
-//        return StreamSupport.stream(unitOfMeasureRepository.findAll()
-//                .spliterator(), false)
-//                .map(unitOfMeasureToUnitOfMeasureCommand::convert)
-//                .collect(Collectors.toSet());
+
     }
 }
