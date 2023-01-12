@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @DataMongoTest
-public class RecipeReactiveRepositoryTest{
+public class RecipeReactiveRepositoryTest {
 
     @Autowired
     RecipeReactiveRepository recipeReactiveRepository;
@@ -23,8 +23,8 @@ public class RecipeReactiveRepositoryTest{
     }
 
     @Test
-    public void testRecipeSave(){
-        Recipe recipe =  new Recipe();
+    public void testRecipeSave() {
+        Recipe recipe = new Recipe();
         recipe.setDescription("Yummy");
 
         recipeReactiveRepository.save(recipe).block();
